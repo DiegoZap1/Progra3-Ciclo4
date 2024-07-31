@@ -1,4 +1,4 @@
-# Clase 1 Semana 3
+#Clase 1 Semana 3
 lista = [4,6,"Agua",True,4.5]
 print(lista)
 print(lista.index("Agua"))
