@@ -1,3 +1,4 @@
+# Laboratorio 2- Ejercicio 2
 import os
 
 def limpiar_consola():
