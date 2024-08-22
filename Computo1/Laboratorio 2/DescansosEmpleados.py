@@ -11,32 +11,36 @@ Objetivo:
 Implementar un programa que calcule a cuanto tiempo de descanso posee un empleado en base a los meses de trabajo
 que este haya hecho.
 '''
+import os
 
-class DescansoEmpleados():
-    def __init__(self,nombre,mesestrabajados):
+class DescansoEmpleados:
+    def __init__(self, nombre, mesestrabajados):
         self.nombre = nombre
         self.mesestrabajados = mesestrabajados
         self.descanso = ""
 
-    def descansos(self):
+    def calcular_descanso(self):
         if self.mesestrabajados < 6:
-            self.descanso = "Todavia no hay descanso"
-        elif self.mesestrabajados > 6 and self.mesestrabajados == 12:
+            self.descanso = "Todavía no hay descanso"
+        elif 6 <= self.mesestrabajados <= 12:
             self.descanso = "1 Semana de descanso"
-        elif self.mesestrabajados >= 13 and self.mesestrabajados >= 18:
+        elif 13 <= self.mesestrabajados <= 18:
             self.descanso = "1 Mes de descanso"
+        else:
+            self.descanso = "Valor no admitido"
 
     def mostrarinfo(self):
-        self.descansos()
-        info = ["Nombre del libro: ","Meses trabajados: ","Descanso: "]
-        tipo = [self.nombre,self.mesestrabajados,self.descanso]
-        for i in range(1,len(tipo)+1):
-            print(f"{info[i-1]}{tipo[i-1]}")
+        info = ["Nombre del empleado: ", "Meses trabajados: ", "Descanso: "]
+        tipo = [self.nombre, self.mesestrabajados, self.descanso]
+        for i in range(len(tipo)):
+            print(f"{info[i]}{tipo[i]}")
 
 def gestiondescansos():
     nombre = input("Ingrese el nombre del empleado: ")
     meses = int(input("Ingrese los meses trabajados: "))
-    desc = DescansoEmpleados(nombre,meses)
+    desc = DescansoEmpleados(nombre, meses)
+    desc.calcular_descanso()
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("==================================")
     desc.mostrarinfo()
     print("==================================")
