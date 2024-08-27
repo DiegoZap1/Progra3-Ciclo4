@@ -1,1 +1,3 @@
-Aqui estaran subiendose todas las actividades, laboratorios y parciales que se vayan realizando
+Integrantes del Equipo:
+Diego Alexander Zapata López SMSS013123
+Jose Luis Escobar Caceres SMSS012223
