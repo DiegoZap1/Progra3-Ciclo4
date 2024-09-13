@@ -7,6 +7,7 @@ from PyQt5 import uic
 class mainwindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        uic.loadUi("design.ui",self)
         self.num1 = self.findChild(QLineEdit,"num1")
         self.num2 = self.findChild(QLineEdit,"num2")
         self.boton = self.findChild(QPushButton,"pushButton")
