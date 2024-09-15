@@ -80,7 +80,7 @@ class mainwindow(QMainWindow):
         
         if producto_seleccionado != "Seleccionar":
             precio = self.precios.get(producto_seleccionado)
-            self.factura.setText(f"{producto_seleccionado}: ${precio}")
+            self.factura.setText(f"Orden\n{producto_seleccionado}: ${precio}")
         else:
             self.factura.setText("")
     
@@ -89,7 +89,7 @@ class mainwindow(QMainWindow):
         efectivo = self.efectivo
 
         if (self.productos.currentText() == "Seleccionar"):
-            self.pagado.setText("Primero seleccione un producto")
+            self.pagado.setText("Seleccione un producto")
         elif not (tarjeta.isChecked() or efectivo.isChecked()):
             self.pagado.setText("Seleccione un metodo de pago")
         else:
