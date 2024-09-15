@@ -11,15 +11,21 @@ class mainwindow(QMainWindow):
         self.setGeometry(200,200,400,300)
 
         # Datos personales
-        nombre = QLabel(f"Nombre: Diego Alexander Zapata López")
-        edad = QLabel(f"Edad: {19} años")
-        nombre.setAlignment(Qt.AlignCenter)
-        edad.setAlignment(Qt.AlignCenter)
+        nombre1 = QLabel(f"Nombre: Diego Alexander Zapata López")
+        edad1 = QLabel(f"Edad: {19} años")
+        nombre2 = QLabel("Jose Luis Escobar Caceres")
+        edad2 = QLabel(f"Edad: {19} años")
+        nombre1.setAlignment(Qt.AlignCenter)
+        edad1.setAlignment(Qt.AlignCenter)
+        nombre2.setAlignment(Qt.AlignCenter)
+        edad2.setAlignment(Qt.AlignCenter)
 
         # Mostrar en pantalla
         layout = QFormLayout()
-        layout.addRow(nombre)
-        layout.addRow(edad)
+        layout.addRow(nombre1)
+        layout.addRow(edad1)
+        layout.addRow(nombre2)
+        layout.addRow(edad2)
         layout.setFormAlignment(Qt.AlignCenter)
         central = QWidget()
         central.setLayout(layout)
