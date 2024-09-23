@@ -212,6 +212,12 @@ class Buscar(QWidget):
 
     def regresarMainwindow(self):
         self.stacked_widget.setCurrentIndex(0)
+        self.nombre_input.clear()
+        self.email_input.clear()
+        self.telefono_input.clear()
+        self.dui_input.clear()
+        self.departamento_input.clear()
+        self.sueldo_input.clear()
 
 class mainwindow(QMainWindow):
     def __init__(self,):
