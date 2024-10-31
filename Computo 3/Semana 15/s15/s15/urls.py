@@ -20,9 +20,10 @@ from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('camisas/',views.gcamisas),
-    path('',views.view1),
+    path('',views.home, name='home'),
+    path('camisas/',views.gcamisas,name='camisas'),
+    path('view1',views.view1),
     path('clases/',views.view2.as_view()),
-    path('form/',views.view2.formget),
+    path('form/',views.formget),
     path('formclass/',views.view3.as_view())
 ]
