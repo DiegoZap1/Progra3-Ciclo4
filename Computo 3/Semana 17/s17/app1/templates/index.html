@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{%block titulo%}Index{%endblock%}
+{%block contenido%}
+
+    <h1>Lista de materiales</h1>
+    <a href=""><button type="button">
+        Ingresar nueva materia
+    </button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estudiantes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for m in mat%}
+            <tr>
+                <td>{{mat.materia}}</td>
+                <td>{{mat.estudiante}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+    <h1>Lista de materiales</h1>
+    <a href=""><button type="button">
+        Ingresar nuevo estudiante
+    </button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Carnet</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {%for e in est%}
+            <tr>
+                <td>{{e.Nombre}}</td>
+                <td>{{e.Carnet}}</td>
+                <th>{{e.Edad}}</th>
+                <th>{{e.Curso}}</th>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+{%endblock%}

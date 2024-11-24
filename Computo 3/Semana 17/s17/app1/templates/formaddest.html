@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block titulo%}Formulario{%endblock%}
+{%block contenido%}
+    {%csrf_token%}
+    <form action="/add/" method="post">
+        {%csrf_token%}
+        {{form.nom}}
+        {{form.car}}
+        {{form.ed}}
+        {{form.cur}}
+        <button type="submit">Click</button>
+    </form>
+
+{%endblock%}
